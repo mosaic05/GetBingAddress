@@ -8,7 +8,7 @@ from time import sleep
 logging.basicConfig(level=logging.INFO)
 
 def get_bing_geocode(address, key):
-    \"\"\" 
+    """ 
     Get geographic coordinates for a given address using Bing Maps API.
 
     Parameters:
@@ -17,7 +17,7 @@ def get_bing_geocode(address, key):
 
     Returns:
     tuple: longitude and latitude
-    \"\"\"
+    """
     try:
         g = geocoder.bing(address, key=key, timeout=10)
         results = g.json
@@ -25,14 +25,14 @@ def get_bing_geocode(address, key):
         if results:
             return results['lng'], results['lat']
         else:
-            logging.warning(f\"No result for address: {address}\")
+            logging.warning(f"No result for address: {address}")
             return None, None
 
     except Exception as e:
-        logging.error(f\"Error geocoding address {address}: {str(e)}\")
+        logging.error(f"Error geocoding address {address}: {str(e)}")
         return None, None
 
 # Example usage
-if __name__ == \"__main__\":
+if __name__ == "__main__":
     lng, lat = get_bing_geocode('1600 Amphitheatre Parkway, Mountain View, CA', '<Your Bing API Key>')
-    print(f\"Longitude: {lng}, Latitude: {lat}\")
+    print(f"Longitude: {lng}, Latitude: {lat}")
