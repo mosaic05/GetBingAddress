@@ -15,7 +15,7 @@ pip install geocoder
 ## Usage
 ### Geocoding an Address
 ```python
-from get_bing_address import get_bing_geocode
+from GetBingAddress import get_bing_geocode
 
 # Geocoding an address
 longitude, latitude = get_bing_geocode('1600 Amphitheatre Parkway, Mountain View, CA', '<Your Bing API Key>')
@@ -23,7 +23,7 @@ longitude, latitude = get_bing_geocode('1600 Amphitheatre Parkway, Mountain View
 
 ### Reverse Geocoding
 ```python
-from get_bing_address import get_bing_reverse_geocode
+from GetBingAddress import get_bing_reverse_geocode
 
 # Reverse geocoding
 address = get_bing_reverse_geocode(37.422408, -122.085609, '<Your Bing API Key>')
